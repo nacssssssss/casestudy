@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sports Enthusiast Portfolio</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      background-color: #111111;
+      background-image: linear-gradient(32deg, rgba(8, 8, 8, 0.74) 30px, transparent);
+      background-size: 60px 60px;
+      background-position: -5px -5px;
+    }
+
+    .nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.6s ease-out;
+      padding: 40px 20px;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .section.visible {
+      opacity: 1;
+    }
+
+    footer {
+      background-color: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .projects {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .project {
+      background-color: #212121;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      color: #ff6600;
+      font-size: 1.5em;
+    }
+
+    .contact {
+      padding: 20px;
+      background-color: #212121;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact h2 {
+      color: #ff6600;
+    }
+
+    .contact a {
+      color: #ff6600;
+      text-decoration: none;
+      font-size: 1.2em;
+      margin: 10px;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body class="container">
+  <h1>Welcome to my Sports Portfolio</h1>
+
+  <div class="nav">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About me</a>
+      <a href="#portfolio">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <section id="home" class="section fade-in">
+    <h2>Hi <br />I'm John Eiries DC. Nacu!</h2>
+    <p>I live and breathe sports. Welcome to my portfolio, where I showcase my journey as an athlete and a sports lover.</p>
+  </section>
+
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I’m John Eiries DC. Nacu, fondly known as Nacs among friends and peers. As a passionate and dedicated athlete, I’ve immersed myself in the world of sports, excelling in basketball and track & field. Competing fuels my drive, but my love for sports goes beyond the court and the track. Staying fit and active is a lifestyle I wholeheartedly embrace, not just for the physical benefits but for the discipline, teamwork, and resilience it instills.</p>
+    <p>My athletic journey is a story of growth, perseverance, and the pursuit of excellence. I take immense pride in sharing my passion with others, whether it’s inspiring someone to take their first step toward fitness or encouraging them to push beyond their limits. Beyond personal achievements, I aim to foster a supportive community where the values of sportsmanship, hard work, and camaraderie shine through.</p>
+    <p>For me, sports are not just about winning but about learning, improving, and bringing out the best in myself and those around me. Whether on the court, the track, or in daily life, I strive to live by the principles that athletics has taught me and to share that enthusiasm with everyone I meet.</p>
+  </section>
+
+  <section id="portfolio" class="section fade-in">
+    <h2>Achievements</h2>
+    <div class="projects">
+      <div class="project">
+        <img src="medals.jpg" style="width: 400px;">
+        <h3>Mythical 5 year <br />2022-2023</h3>
+        <p>One of the Mythical 5 during Intramurals year 2022-2023</p>
+      </div>
+      <div class="project">
+        <img src="Download Hand holding trophy for free.jpg" style="width: 400px;">
+        <h3>Municipal Meet Championship 2019-2020</h3>
+        <p>Won at Municipal Meet on 2019-2020 and have the award of MVP</p>
+      </div>
+      <div class="project">
+        <img src="track.jpg" style="width: 400px;">
+        <h3>Track & Field - 800m Dash </br>2018-2019</h3>
+        <p>3rd Placer on Provincial Meet at Palayan Sports Complex year <br /> 2018-2019</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out to me through the following platforms:</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=100074316512810" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/its_nacs/" target="_blank">Instagram</a>
+    </p>
+    <p>Mobile: <a href="tel:+639163002711" style="color: #ff6600;">09163002711</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Sports Portfolio by Nacu & Mangahas</p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navLinks = document.querySelectorAll("nav a");
+      const sections = document.querySelectorAll(".section");
+
+      function hideSections() {
+        sections.forEach(section => {
+          section.classList.remove("active", "visible");
+        });
+      }
+
+      function showSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        hideSections();
+        section.classList.add("active");
+        setTimeout(() => {
+          section.classList.add("visible");
+        }, 10);
+      }
+
+      navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetSection = link.getAttribute("href").substring(1);
+          showSection(targetSection);
+        });
+      });
+
+      showSection("home");
+    });
+  </script>
+</body>
+</html>

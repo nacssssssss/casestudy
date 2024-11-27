@@ -1,0 +1,157 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: #004d00;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+
+
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+#home {
+    background: url('https://images.unsplash.com/photo-1593712828190-556f70259bb2') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+#about {
+    text-align: center;
+
+
+}
+
+#about h2 {
+    color: #ff6600;
+}
+
+#portfolio {
+    text-align: center;
+}
+
+#portfolio h2 {
+    color: #ff6600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #212121;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    background-image: url("C:\Users\johnn\OneDrive\Desktop\KUPAL2024\Download Hand holding trophy for free.jpg");
+    color: #ff6600;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact h2 {
+    color: #ff6600;
+}
+
+footer {
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  background-image: linear-gradient(
+    32deg,
+    rgba(8, 8, 8, 0.74) 30px,
+    transparent
+  );
+  background-size: 60px 60px;
+  background-position: -5px -5px;
+}
+.nav{
+    border: solid 2px;
+}
+/* Fade-in animation */
+.fade-in {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Slight downward movement */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.fade-in.visible {
+  opacity: 1; /* Make the element visible */
+  transform: translateY(0); /* Move it to its original position */
+}
+/* CSS for fade-in animation */
+.fade-in {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Start from below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.fade-in.visible {
+  opacity: 1; /* Make visible */
+  transform: translateY(0); /* Move to original position */
+}
+
+/* To hide all sections by default */
+.section {
+  display: none;
+}
+
+/* Show the section when it's active */
+.section.active {
+  display: block;
+}
